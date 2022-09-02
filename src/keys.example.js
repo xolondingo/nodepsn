@@ -1,3 +1,4 @@
+// Renombra el archivo como keys.js y personaliza los parametros a continuación de acuerdo al servidor
 module.exports = {
     database: {
         host: 'localhost', //Se modifica esta direccion dependiendo de la locacion
