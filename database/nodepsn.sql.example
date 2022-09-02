@@ -1,0 +1,59 @@
+# ************************************************************
+# Sequel Ace SQL dump
+# Versión 20035
+#
+# https://sequel-ace.com/
+# https://github.com/Sequel-Ace/Sequel-Ace
+#
+# Equipo: localhost (MySQL 8.0.26)
+# Base de datos: nodepsn
+# Tiempo de generación: 2022-09-02 18:35:56 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+SET NAMES utf8mb4;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE='NO_AUTO_VALUE_ON_ZERO', SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Volcado de tabla peliculas
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `peliculas`;
+
+CREATE TABLE `peliculas` (
+  `id_peliculas` int NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `anio` varchar(4) DEFAULT NULL,
+  `genero` varchar(45) DEFAULT NULL,
+  `categoria` int DEFAULT NULL,
+  `duracion` varchar(10) DEFAULT NULL,
+  `plataforma` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_peliculas`),
+  UNIQUE KEY `id_peliculas_UNIQUE` (`id_peliculas`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+LOCK TABLES `peliculas` WRITE;
+/*!40000 ALTER TABLE `peliculas` DISABLE KEYS */;
+
+INSERT INTO `peliculas` (`id_peliculas`, `titulo`, `anio`, `genero`, `categoria`, `duracion`, `plataforma`)
+VALUES
+	(1,'El señor de los anillos - La cominidad del anillo','2010','1',1,'02:20:43','3'),
+	(2,'El señor de los anillos - Las dos torres','2012','1',1,'03:05:43','3'),
+	(3,'El señor de los anillos - El regreso del rey','2014','1',1,'02:16:22','3');
+
+/*!40000 ALTER TABLE `peliculas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
